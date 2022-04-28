@@ -51,3 +51,46 @@ flowchart LR
     style id3 fill:white
 ```
 Novamente Observamos que o Rei está na casa branca e escolhe ir para o Sul, um movimento inválido.
+
+
+### Simulações
+
+Para verificar que realmente a probabilidade é zero, foi implementado o jogo em python
+
+
+saída da simulação  quando as direções desejada é N, S, S, N, NE, SW, SW, NW, NW, SE, SE, NE
+```shell
+python simulation_game.py
+processing: 100.0% % 
+    number of trails: 1000000 # um milhão
+    occurrences: 0
+    Probability: 0.0
+```
+
+saída da simulação  quando as direções desejada é apenas N
+
+```shell
+python simulation_game.py
+processing: 100.0% % 
+    number of trails: 1000000
+    occurrences: 561740
+    Probability: 0.56174 # aprox 9/16
+```
+
+saída da simulação  quando as direções desejada é  N,N
+
+```shell
+python simulation_game.py
+processing: 100.0% % 
+    number of trails: 1000000
+    occurrences: 124666
+    Probability: 0.124666 # aprox 1/8
+```
+
+## Observações
+Para executar o teste da formula da imagem de xadrez, irá precisar
+instalar as dependências:
+```shell
+pip install -r requirements.txt
+```
+Versão do Python utilizada: __3.10.4__
